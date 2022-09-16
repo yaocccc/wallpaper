@@ -8,7 +8,7 @@ done
 
 let i2=1
 
-for file in $(ls | grep -v 1.sh | grep -v README); do
+for file in $(ls -tr | grep -v 1.sh | grep -v README); do
     [ -f $file ] && mv $file $(printf "%02d" $i2).png && let i2=i2+1
 done
 
